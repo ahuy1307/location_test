@@ -1,6 +1,7 @@
 # Location React Project
 
-This is a simple starter template for building React applications using Vite.
+- This is a simple starter template for building React applications using Vite. </br>
+- If you want to try, i deployed it for you https://location-test-one.vercel.app/
 
 ## Getting Started
 
@@ -32,7 +33,8 @@ npm install
 ```
 npm run dev
 ```
-This will start the development server and open your default web browser to http://localhost:5173/. Any changes you make to the source files will automatically reload the page.
+This will start the development server and open your default web browser to http://localhost:5173/. </br>
+Any changes you make to the source files will automatically reload the page.
 
 - Building for Production
 To build the project for production, run:
