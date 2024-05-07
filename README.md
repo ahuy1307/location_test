@@ -32,7 +32,7 @@ npm install
 ```
 npm run dev
 ```
-This will start the development server and open your default web browser to http://localhost:3000. Any changes you make to the source files will automatically reload the page.
+This will start the development server and open your default web browser to http://localhost:5173/. Any changes you make to the source files will automatically reload the page.
 
 - Building for Production
 To build the project for production, run:
