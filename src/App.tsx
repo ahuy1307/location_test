@@ -60,7 +60,7 @@ function App() {
     // }
 
     const onDragEnd = (result: any) => {
-        const { destination, source, draggableId } = result;
+        // const { destination, source, draggableId } = result;
 
         console.log(result)
 
