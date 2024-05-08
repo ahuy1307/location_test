@@ -20,12 +20,12 @@ export const CustomNode: React.FC<Props> = (props) => {
         props.onToggle(props.node.id);
     };
 
-    const dragOverProps = useDragOver(id, props.isOpen, props.onToggle);
+    const dragOverProps = useDragOver(id, props.isOpen, props.onToggle); //auto expand on dragover
 
     return (
         <div
             onClick={handleToggle}
-            className={`flex items-center gap-x-2 mt-2 cursor-pointer`}
+            className={`flex items-center gap-x-2 mt-2 cursor-pointer no-select`}
             style={{ paddingInlineStart: indent }}
             {...dragOverProps}
         >

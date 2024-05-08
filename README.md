@@ -46,7 +46,7 @@ This will generate an optimized build in the dist directory, ready to be deploye
 ### Running Tests
 To run tests, execute:
 ```
-npm test
+npm     test
 ```
 This will run any test suites you have set up for your project.
 

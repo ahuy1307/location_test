@@ -25,6 +25,13 @@
     padding: 4px 8px;
     pointer-events: none;
   }
+
+  .no-select{
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+  }
 }
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
