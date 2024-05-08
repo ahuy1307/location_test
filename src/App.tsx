@@ -30,7 +30,6 @@ function App() {
             try {
                 const response = await fetch('https://mocki.io/v1/f1239b6d-8f43-45ab-be1a-d06c9bc6ab34')
                 const data = await response.json()
-                console.log(data)
                 setTreeData([...getTreeData(0, data)])
                 setIsLoading(false)
             } catch (e) {

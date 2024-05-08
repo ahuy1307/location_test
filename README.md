@@ -36,8 +36,8 @@ npm run dev
 This will start the development server and open your default web browser to http://localhost:5173/. </br>
 Any changes you make to the source files will automatically reload the page.
 
-- Building for Production
-To build the project for production, run:
+### Building for Production 
+- To build the project for production, run:
 ```
 npm run build
 ```
@@ -46,13 +46,13 @@ This will generate an optimized build in the dist directory, ready to be deploye
 ### Running Tests
 To run tests, execute:
 ```
-npm     test
+npm test
 ```
 This will run any test suites you have set up for your project.
 
 ### Learn More
-- To learn more about [Vite](https://vitejs.dev/), check out the Vite documentation.
-- To learn more about [React](https://react.dev/), check out the React documentation.
+- To learn more about Vite, check out the [Vite](https://vitejs.dev/) documentation.
+- To learn more about React, check out the  [React](https://react.dev/) documentation.
 
 ### License
 This project is licensed under the MIT License - see the LICENSE file for details.
