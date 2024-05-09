@@ -1,8 +1,8 @@
 import {useEffect, useState} from "react";
-import {useLocation} from "../../contexts/LocationContextProvider.tsx";
-import CustomDndTree from "../../components/custom_draggable/CustomDndTree.tsx";
-import {LocationResponse} from "../../interface.ts";
-import Navigation from "../../components/Navigation.tsx";
+import {useLocation} from "../contexts/LocationContextProvider.tsx";
+import {LocationResponse} from "../interface.ts";
+import Navigation from "../components/Navigation.tsx";
+import CustomDndTree from "../components/custom_draggable/CustomDndTree.tsx";
 // import { TouchBackend } from 'react-dnd-touch-backend';
 
 function HomePage() {
@@ -24,9 +24,10 @@ function HomePage() {
     return (
         <>
             <Navigation />
+            <p className={"ml-8 mt-8 italic"}>Show max parent is 3 and show max child is 5</p>
             {isLocationLoading ? <div>Loading...</div>  :
-                    <CustomDndTree locationData={dataLocation}
-                                   className={"h-full max-h-[500px] ml-8 mt-8 overflow-y-scroll small-scrollbar w-fit pr-10 shadow border p-2"}/>
+                <CustomDndTree locationData={dataLocation}
+                               className={"h-full max-h-[500px] ml-8 mt-8 overflow-y-scroll small-scrollbar w-fit pr-10 shadow border p-2"}/>
             }
         </>
     );

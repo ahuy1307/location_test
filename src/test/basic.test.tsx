@@ -1,11 +1,19 @@
 import { expect, test  } from 'vitest'
 import { render, screen, fireEvent  } from '@testing-library/react';
 import {CustomNode} from "../components/custom_draggable/CustomNode.tsx";
-import HomePage from "../pages/home/HomePage.tsx";
+import HomePage from "../pages/HomePage.tsx";
+import LocationContextProvider from "../contexts/LocationContextProvider.tsx";
+import {BrowserRouter} from "react-router-dom";
 
 test('renders loading text while fetching data', () => {
-    render(<HomePage />);
-    const loadingElement = screen.getByText(/Loading.../i);
+    render(
+        <LocationContextProvider>
+            <BrowserRouter>
+                <HomePage />
+            </BrowserRouter>
+        </LocationContextProvider>
+    );
+    const loadingElement = screen.getByText("Loading...");
     expect(loadingElement).toBeInTheDocument();
 });
 
@@ -18,7 +26,8 @@ test('renders node of tree after data is fetched', async () => {
         data: {
             label: 'Company HQ',
             is_area: true,
-            is_remote: false
+            is_remote: false,
+            index: -1
         }
     }} depth={0} isOpen={false} onToggle={function(id: string | number): void {
         throw new Error('Function not implemented.');
@@ -40,7 +49,8 @@ test('performs drag and drop action correctly', async () => {
                data: {
                    label: 'Company HQ',
                    is_area: true,
-                   is_remote: false
+                   is_remote: false,
+                   index: -1
                }
            }} depth={0} isOpen={false} onToggle={(id: string | number): void => {
                throw new Error('Function not implemented.');
@@ -53,7 +63,8 @@ test('performs drag and drop action correctly', async () => {
                data: {
                    label: 'Anjou Sales Office',
                    is_area: false,
-                   is_remote: false
+                   is_remote: false,
+                   index: 0
                }
            }} depth={0} isOpen={false} onToggle={function(id: string | number): void {
                throw new Error('Function not implemented.');

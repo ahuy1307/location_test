@@ -34,19 +34,20 @@ export const CustomNode: React.FC<Props> = (props) => {
     };
 
     const dragOverProps = useDragOver(id, props.isOpen, props.onToggle); //auto expand on dragover
-
     return (
-        <div
-            onClick={handleToggle}
-            className={`flex items-center gap-x-2 mt-2 cursor-pointer no-select`}
-            style={{ paddingInlineStart: indent }}
-            {...dragOverProps}
-        >
+        <div style={{paddingInlineStart: indent}}>
+            <div
+                onClick={handleToggle}
+                className={`flex items-center gap-x-2 mt-2 cursor-pointer no-select`}
+                {...dragOverProps}
+            >
 
-            {data && data.is_area ? <FolderIcon/> : <LocationIcon />}
+                {data && data.is_area ? <FolderIcon/> : <LocationIcon/>}
 
-            {data && data.label}
-            {droppable && <UpIcon className={twMerge(`transition-all duration-200`, !props.isOpen && `rotate-180`)} />}
+                {data && data.label}
+                {droppable &&
+                    <UpIcon className={twMerge(`transition-all duration-200`, !props.isOpen && `rotate-180`)}/>}
+                </div>
         </div>
     );
 };

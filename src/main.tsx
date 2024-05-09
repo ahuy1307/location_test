@@ -2,9 +2,9 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import LocationContextProvider from "./contexts/LocationContextProvider.tsx";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import ErrorPage from "./pages/error/ErrorPage.tsx";
-import TestPage from "./pages/test/TestPage.tsx";
-import HomePage from "./pages/home/HomePage.tsx";
+import ErrorPage from "./pages/ErrorPage.tsx";
+import TestPage from "./pages/TestPage.tsx";
+import HomePage from "./pages/HomePage.tsx";
 
 const router = createBrowserRouter([
     {
