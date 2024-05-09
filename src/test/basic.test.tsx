@@ -1,11 +1,10 @@
-// App.test.tsx
 import { expect, test  } from 'vitest'
 import { render, screen, fireEvent  } from '@testing-library/react';
-import App from '../App.tsx'
-import {CustomNode} from "../components/CustomNode.tsx";
+import {CustomNode} from "../components/custom_draggable/CustomNode.tsx";
+import HomePage from "../pages/home/HomePage.tsx";
 
 test('renders loading text while fetching data', () => {
-    render(<App />);
+    render(<HomePage />);
     const loadingElement = screen.getByText(/Loading.../i);
     expect(loadingElement).toBeInTheDocument();
 });

@@ -1,7 +1,7 @@
 import React from "react";
 import { DragLayerMonitorProps } from "@minoru/react-dnd-treeview";
-import {FolderIcon, LocationIcon} from "../icon.tsx";
-import {Location} from "../interface.ts";
+import {Location} from "../../interface.ts";
+import {FolderIcon, LocationIcon} from "../../icon.tsx";
 
 type Props = {
     monitorProps: DragLayerMonitorProps<Location>;

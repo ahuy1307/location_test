@@ -1,7 +1,7 @@
-import React from "react";
+import React, {useState} from "react";
 import { NodeModel, useDragOver } from "@minoru/react-dnd-treeview";
-import {Location} from "../interface.ts";
-import {FolderIcon, LocationIcon, UpIcon} from "../icon.tsx";
+import {Location} from "../../interface.ts";
+import {FolderIcon, LocationIcon, UpIcon} from "../../icon.tsx";
 import {twMerge} from "tailwind-merge";
 
 type Props = {
@@ -14,10 +14,23 @@ type Props = {
 export const CustomNode: React.FC<Props> = (props) => {
     const { id, droppable, data } = props.node;
     const indent = props.depth * 24;
+    const [isProcessing, setIsProcessing] = useState(false);
 
     const handleToggle = (e: React.MouseEvent) => {
         e.stopPropagation();
+
+        //prevent user click too fast
+        if (isProcessing) {
+            return;
+        }
+
+        setIsProcessing(true);
+
         props.onToggle(props.node.id);
+
+        setTimeout(() => {
+            setIsProcessing(false);
+        }, 200);
     };
 
     const dragOverProps = useDragOver(id, props.isOpen, props.onToggle); //auto expand on dragover
