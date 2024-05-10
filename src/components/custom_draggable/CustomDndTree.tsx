@@ -1,5 +1,5 @@
 import {HTML5Backend} from "react-dnd-html5-backend";
-import {getBackendOptions, NodeModel, Tree} from "@minoru/react-dnd-treeview";
+import {DropOptions, getBackendOptions, NodeModel, Tree} from "@minoru/react-dnd-treeview";
 import {Location, LocationResponse} from "../../interface.ts";
 import {CustomNode} from "./CustomNode.tsx";
 import {CustomDragPreview} from "./CustomDragPreview.tsx";
@@ -12,8 +12,23 @@ function CustomDndTree({locationData, className}: {locationData: LocationRespons
     const [treeData, setTreeData] = useState<NodeModel<Location>[]>([]);
     const [count, setCount] = useState(3);
 
-    const handleDrop = (newTree: NodeModel<Location>[]) => {
-        // const { dragSource, dropTargetId, destinationIndex} = options;
+    const handleDrop = (newTree: NodeModel<Location>[], options: DropOptions<Location>) => {
+        const { dragSource, destinationIndex} = options;
+
+        if(!destinationIndex || !dragSource) return;
+
+        const index = destinationIndex == newTree.length ? destinationIndex - 1 : destinationIndex + 1;
+        const afterTree = newTree[index]
+        const dragTree = newTree[destinationIndex]
+
+        if (afterTree.data && dragSource.data) {
+            if (dragTree.data) {
+                if (afterTree.data.space == dragSource.data.space) {
+                    setTreeData([...newTree]);
+                    return;
+                } else dragTree.data.space = !dragTree.data.space;
+            }
+        }
 
         setTreeData([...newTree]);
     }
@@ -27,6 +42,7 @@ function CustomDndTree({locationData, className}: {locationData: LocationRespons
     useEffect(() => {
        setNewData()
     }, [count]);
+
 
     return <div className={className}>
         <DndProvider backend={HTML5Backend} options={{
@@ -71,7 +87,7 @@ function CustomDndTree({locationData, className}: {locationData: LocationRespons
                     placeholder: "relative",
                 }}
                 enableAnimateExpand={true}
-                onDrop={handleDrop}
+                onDrop={(tree, options) => handleDrop(tree, options)}
             />
         </DndProvider>
         {count <= locationData.length &&

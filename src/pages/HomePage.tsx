@@ -13,7 +13,7 @@ function HomePage() {
 
     useEffect(() => {
         const fetchData = async () => {
-            const data = await getLocations("https://mocki.io/v1/f1239b6d-8f43-45ab-be1a-d06c9bc6ab34")
+            const data = await getLocations("https://mocki.io/v1/a9ea0ff1-334b-4a18-a6ce-d1e5c6537095")
             setDataLocation(data)
         }
 

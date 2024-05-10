@@ -12,8 +12,11 @@ type Props = {
 };
 
 export const CustomNode: React.FC<Props> = (props) => {
+    const HEIGHT_TREE = 3;
+
     const { id, droppable, data } = props.node;
-    const indent = props.depth * 24;
+    const newDepth = props.depth == HEIGHT_TREE ? 2 : props.depth > HEIGHT_TREE - 1 ? props.depth - HEIGHT_TREE +  1: props.depth;
+    const indent = !data?.space ? newDepth * 24 : (newDepth - 1) * 24;
     const [isProcessing, setIsProcessing] = useState(false);
 
     const handleToggle = (e: React.MouseEvent) => {
