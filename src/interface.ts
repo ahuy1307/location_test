@@ -2,7 +2,8 @@ export interface Location {
     label: string,
     is_area: boolean,
     is_remote: boolean,
-    height: number
+    height: number,
+    real_parent_id: number | string
 }
 
 export interface LocationResponse {

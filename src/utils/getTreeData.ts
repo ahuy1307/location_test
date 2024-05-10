@@ -17,7 +17,8 @@ export function getTreeData(id: number | string, data: LocationResponse[], heigh
                 label: item.label,
                 is_area: item.is_area,
                 is_remote: item.is_remote,
-                height: height
+                height: height,
+                real_parent_id: id
             }
         })
 

@@ -27,7 +27,8 @@ test('renders node of tree after data is fetched', async () => {
             label: 'Company HQ',
             is_area: true,
             is_remote: false,
-            height: 0
+            height: 0,
+            real_parent_id: 0
         }
     }} depth={0} isOpen={false} onToggle={function(id: string | number): void {
         throw new Error('Function not implemented.');
@@ -50,7 +51,8 @@ test('performs drag and drop action correctly', async () => {
                    label: 'Company HQ',
                    is_area: true,
                    is_remote: false,
-                   height: 0
+                   height: 0,
+                   real_parent_id: 0
                }
            }} depth={0} isOpen={false} onToggle={(id: string | number): void => {
                throw new Error('Function not implemented.');
@@ -64,7 +66,8 @@ test('performs drag and drop action correctly', async () => {
                    label: 'Anjou Sales Office',
                    is_area: false,
                    is_remote: false,
-                   height: 1
+                   height: 1,
+                   real_parent_id: 111
                }
            }} depth={0} isOpen={false} onToggle={function(id: string | number): void {
                throw new Error('Function not implemented.');
@@ -81,7 +84,8 @@ test('performs drag and drop action correctly', async () => {
                 "label": "Company HQ",
                 "is_area": true,
                 "is_remote": false,
-                "height": 0
+                "height": 0,
+                "real_parent_id": 0
             }
         },
         {
@@ -93,7 +97,8 @@ test('performs drag and drop action correctly', async () => {
                 "label": "Anjou Sales Office",
                 "is_area": false,
                 "is_remote": false,
-                "height": 1
+                "height": 0,
+                "real_parent_id": 111
             }
         },
     ]

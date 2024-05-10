@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import { NodeModel, useDragOver } from "@minoru/react-dnd-treeview";
 import {Location} from "../../interface.ts";
 import {FolderIcon, LocationIcon, UpIcon} from "../../icon.tsx";
@@ -15,6 +15,11 @@ export const CustomNode: React.FC<Props> = (props) => {
     const { id, droppable, data } = props.node;
     const indent = data && data.height * 24;
     const [isProcessing, setIsProcessing] = useState(false);
+
+    useEffect(() => {
+        if(props.node.data && props.node.data.real_parent_id != props.node.parent)
+            props.node.parent = props.node.data.real_parent_id;
+    }, []);
 
     const handleToggle = (e: React.MouseEvent) => {
         e.stopPropagation();
