@@ -2,7 +2,7 @@ import {Location, LocationResponse, TreeModel} from "../interface.ts";
 
 const LIMIT_CHILD = 5;
 
-export function getTreeData(id: number | string, data: LocationResponse[]): TreeModel<Location>[] {
+export function getTreeData(id: number | string, data: LocationResponse[], height: number): TreeModel<Location>[] {
     const arr:TreeModel<Location>[] = [];
     let parentId : number | string;
 
@@ -17,7 +17,7 @@ export function getTreeData(id: number | string, data: LocationResponse[]): Tree
                 label: item.label,
                 is_area: item.is_area,
                 is_remote: item.is_remote,
-                space: !!parentId
+                height: height
             }
         })
 
@@ -25,7 +25,7 @@ export function getTreeData(id: number | string, data: LocationResponse[]): Tree
             parentId = item.id;
 
         if (item.locations.length > 0) {
-            arr.push(...getTreeData(item.id, item.locations))
+            arr.push(...getTreeData(item.id, item.locations, height + 1))
         }
     })
 

@@ -12,11 +12,8 @@ type Props = {
 };
 
 export const CustomNode: React.FC<Props> = (props) => {
-    const HEIGHT_TREE = 3;
-
     const { id, droppable, data } = props.node;
-    const newDepth = props.depth == HEIGHT_TREE ? 2 : props.depth > HEIGHT_TREE - 1 ? props.depth - HEIGHT_TREE +  1: props.depth;
-    const indent = !data?.space ? newDepth * 24 : (newDepth - 1) * 24;
+    const indent = data && data.height * 24;
     const [isProcessing, setIsProcessing] = useState(false);
 
     const handleToggle = (e: React.MouseEvent) => {
@@ -29,9 +26,8 @@ export const CustomNode: React.FC<Props> = (props) => {
 
         setIsProcessing(true);
 
-        if(props.node.data && !props.node.data.is_area) {
+        if(props.node.data && !props.node.data.is_area)
             props.node.droppable = false;
-        }
 
         props.onToggle(props.node.id);
         setTimeout(() => {
@@ -39,7 +35,13 @@ export const CustomNode: React.FC<Props> = (props) => {
         }, 200);
     };
 
-    const dragOverProps = useDragOver(id, props.isOpen, props.onToggle); //auto expand on dragover
+    const dragOverProps = useDragOver(id, props.isOpen, () => {
+        if(props.node.data && !props.node.data.is_area) {
+            props.node.droppable = false;
+        }
+
+        props.onToggle(props.node.id);
+    }); //auto expand on dragover
 
     return (
         <div style={{paddingInlineStart: indent}}>

@@ -1,3 +1,5 @@
+
+
 [
   {
     "label": "Company HQ",
@@ -5,256 +7,6 @@
     "is_area": true,
     "is_remote": false,
     "locations": [
-      {
-        "label": "Peterborough Plant 1 ",
-        "id": 101,
-        "is_area": false,
-        "is_remote": false,
-        "locations": [
-
-        ]
-      },
-      {
-        "label": "Peterborough Plant 2",
-        "id": 102,
-        "is_area": false,
-        "is_remote": false,
-        "locations": [
-
-        ]
-      },
-      {
-        "label": "Peterborough Plant 3",
-        "id": 103,
-        "is_area": false,
-        "is_remote": false,
-        "locations": [
-
-        ]
-      },
-      {
-        "label": "Peterborough Plant 4",
-        "id": 104,
-        "is_area": false,
-        "is_remote": false,
-        "locations": [
-
-        ]
-      },
-      {
-        "label": "Peterborough Plant 5",
-        "id": 105,
-        "is_area": false,
-        "is_remote": false,
-        "locations": [
-
-        ]
-      },
-      {
-        "label": "Peterborough Plant 6",
-        "id": 106,
-        "is_area": false,
-        "is_remote": false,
-        "locations": [
-
-        ]
-      },
-      {
-        "label": "Peterborough Plant 7",
-        "id": 107,
-        "is_area": false,
-        "is_remote": false,
-        "locations": [
-
-        ]
-      },
-      {
-        "label": "Peterborough Plant 8",
-        "id": 108,
-        "is_area": false,
-        "is_remote": false,
-        "locations": [
-
-        ]
-      },
-      {
-        "label": "Rexdale -LMPMG Hd Office&Plant",
-        "id": 109,
-        "is_area": false,
-        "is_remote": false,
-        "locations": [
-
-        ]
-      },
-      {
-        "label": "Upfield Toronto",
-        "id": 110,
-        "is_area": false,
-        "is_remote": false,
-        "locations": [
-
-        ]
-      },
-      {
-        "label": "Upfield Toronto",
-        "id": 1111,
-        "is_area": false,
-        "is_remote": false,
-        "locations": [
-
-        ]
-      },
-      {
-        "label": "Upfield Toronto",
-        "id": 1121,
-        "is_area": false,
-        "is_remote": false,
-        "locations": [
-
-        ]
-      },
-      {
-        "label": "Upfield Toronto",
-        "id": 1131,
-        "is_area": false,
-        "is_remote": false,
-        "locations": [
-
-        ]
-      },
-      {
-        "label": "Upfield Toronto",
-        "id": 1141,
-        "is_area": false,
-        "is_remote": false,
-        "locations": [
-
-        ]
-      },
-      {
-        "label": "Upfield Toronto",
-        "id": 1151,
-        "is_area": false,
-        "is_remote": false,
-        "locations": [
-
-        ]
-      },
-      {
-        "label": "Upfield Toronto",
-        "id": 1161,
-        "is_area": false,
-        "is_remote": false,
-        "locations": [
-
-        ]
-      },
-      {
-        "label": "Remote Canada",
-        "id": 111,
-        "is_area": true,
-        "is_remote": true,
-        "locations": [
-          {
-            "label": "Anjou Sales Office",
-            "id": 112,
-            "is_area": false,
-            "is_remote": true,
-            "locations": [
-
-            ]
-          },
-          {
-            "label": "Calgary Sales Office",
-            "id": 113,
-            "is_area": false,
-            "is_remote": true,
-            "locations": [
-
-            ]
-          },
-          {
-            "label": "Ontario Sales Office",
-            "id": 114,
-            "is_area": false,
-            "is_remote": true,
-            "locations": [
-
-            ]
-          },
-          {
-            "label": "Quebec Sales Office",
-            "id": 115,
-            "is_area": false,
-            "is_remote": true,
-            "locations": [
-
-            ]
-          },
-          {
-            "label": "Rexdale Plant",
-            "id": 116,
-            "is_area": false,
-            "is_remote": false,
-            "locations": [
-
-            ]
-          },
-          {
-            "label": "Simcoe -Simcoe Plant - GHP",
-            "id": 117,
-            "is_area": false,
-            "is_remote": false,
-            "locations": [
-
-            ]
-          },
-          {
-            "label": "Toronto -Corp Headquarters",
-            "id": 118,
-            "is_area": false,
-            "is_remote": false,
-            "locations": [
-
-            ]
-          },
-          {
-            "label": "British Columbia Sales Office",
-            "id": 119,
-            "is_area": false,
-            "is_remote": false,
-            "locations": [
-
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "label": "Company HQ",
-    "id": 200,
-    "is_area": true,
-    "is_remote": false,
-    "locations": [
-      {
-        "label": "Peterborough Plant",
-        "id": 201,
-        "is_area": false,
-        "is_remote": false,
-        "locations": [
-
-        ]
-      },
-      {
-        "label": "Peterborough Plant",
-        "id": 202,
-        "is_area": false,
-        "is_remote": false,
-        "locations": [
-
-        ]
-      },
       {
         "label": "Peterborough Plant",
         "id": 203,
@@ -265,7 +17,7 @@
         ]
       },
       {
-        "label": "Peterborough Plant",
+        "label": "Rexdale -LMPMG Hd Office&Plant",
         "id": 204,
         "is_area": false,
         "is_remote": false,
@@ -274,7 +26,7 @@
         ]
       },
       {
-        "label": "Peterborough Plant",
+        "label": "Upfield Toronto",
         "id": 205,
         "is_area": false,
         "is_remote": false,
@@ -283,657 +35,120 @@
         ]
       },
       {
-        "label": "Peterborough Plant",
-        "id": 206,
-        "is_area": false,
-        "is_remote": false,
-        "locations": [
-
-        ]
-      },
-      {
-        "label": "Peterborough Plant",
-        "id": 207,
-        "is_area": false,
-        "is_remote": false,
-        "locations": [
-
-        ]
-      },
-      {
-        "label": "Peterborough Plant",
-        "id": 208,
-        "is_area": false,
-        "is_remote": false,
-        "locations": [
-
-        ]
-      },
-      {
-        "label": "Peterborough Plant",
-        "id": 209,
-        "is_area": false,
-        "is_remote": false,
-        "locations": [
-
-        ]
-      },
-      {
-        "label": "Peterborough Plant",
-        "id": 210,
-        "is_area": false,
-        "is_remote": false,
-        "locations": [
-
-        ]
-      },
-      {
-        "label": "Rexdale -LMPMG Hd Office&Plant",
-        "id": 211,
-        "is_area": false,
-        "is_remote": false,
-        "locations": [
-
-        ]
-      },
-      {
-        "label": "Upfield Toronto",
-        "id": 212,
-        "is_area": false,
-        "is_remote": false,
-        "locations": [
-
-        ]
-      },
-      {
         "label": "Remote Canada",
-        "id": 213,
+        "id": 206,
         "is_area": true,
         "is_remote": true,
         "locations": [
           {
-            "label": "Peterborough Plant",
+            "label": "Anjou Sales Office",
+            "id": 207,
+            "is_area": false,
+            "is_remote": true,
+            "locations": [
+
+            ]
+          },
+          {
+            "label": "Calgary Sales Office",
+            "id": 208,
+            "is_area": false,
+            "is_remote": true,
+            "locations": [
+
+            ]
+          },
+          {
+            "label": "Ontario Sales Office",
+            "id": 209,
+            "is_area": false,
+            "is_remote": true,
+            "locations": [
+
+            ]
+          },
+          {
+            "label": "Quebec Sales Office",
+            "id": 210,
+            "is_area": false,
+            "is_remote": true,
+            "locations": [
+
+            ]
+          },
+          {
+            "label": "Rexdale Plant",
+            "id": 211,
+            "is_area": false,
+            "is_remote": false,
+            "locations": [
+
+            ]
+          },
+          {
+            "label": "Simcoe -Simcoe Plant - GHP",
+            "id": 212,
+            "is_area": false,
+            "is_remote": false,
+            "locations": [
+
+            ]
+          },
+          {
+            "label": "Toronto -Corp Headquarters",
+            "id": 213,
+            "is_area": false,
+            "is_remote": false,
+            "locations": [
+
+            ]
+          },
+          {
+            "label": "British Columbia Sales Office",
             "id": 214,
             "is_area": false,
             "is_remote": false,
             "locations": [
 
             ]
-          },
-          {
-            "label": "Peterborough Plant",
-            "id": 215,
-            "is_area": false,
-            "is_remote": false,
-            "locations": [
-
-            ]
-          },
-          {
-            "label": "Peterborough Plant",
-            "id": 216,
-            "is_area": false,
-            "is_remote": false,
-            "locations": [
-
-            ]
-          },
-          {
-            "label": "Peterborough Plant",
-            "id": 217,
-            "is_area": false,
-            "is_remote": false,
-            "locations": [
-
-            ]
-          },
-          {
-            "label": "Calgary Sales Office",
-            "id": 218,
-            "is_area": false,
-            "is_remote": true,
-            "locations": [
-
-            ]
-          },
-          {
-            "label": "Ontario Sales Office",
-            "id": 219,
-            "is_area": false,
-            "is_remote": true,
-            "locations": [
-
-            ]
-          },
-          {
-            "label": "Quebec Sales Office",
-            "id": 220,
-            "is_area": false,
-            "is_remote": true,
-            "locations": [
-
-            ]
-          },
-          {
-            "label": "Rexdale Plant",
-            "id": 221,
-            "is_area": false,
-            "is_remote": false,
-            "locations": [
-
-            ]
-          },
-          {
-            "label": "Simcoe -Simcoe Plant - GHP",
-            "id": 222,
-            "is_area": false,
-            "is_remote": false,
-            "locations": [
-
-            ]
-          },
-          {
-            "label": "Toronto -Corp Headquarters",
-            "id": 223,
-            "is_area": false,
-            "is_remote": false,
-            "locations": [
-
-            ]
-          },
-          {
-            "label": "British Columbia Sales Office",
-            "id": 224,
-            "is_area": false,
-            "is_remote": false,
-            "locations": [
-
-            ]
           }
         ]
       }
     ]
   },
   {
-    "label": "Company HQ",
-    "id": 300,
+    "label": "Canada",
+    "id": 301,
     "is_area": true,
-    "is_remote": false,
+    "is_remote": true,
     "locations": [
       {
-        "label": "Peterborough Plant",
-        "id": 301,
-        "is_area": false,
-        "is_remote": false,
-        "locations": [
-
-        ]
-      },
-      {
-        "label": "Peterborough Plant",
+        "label": "Location 1",
         "id": 302,
         "is_area": false,
-        "is_remote": false,
+        "is_remote": true,
         "locations": [
 
         ]
       },
       {
-        "label": "Peterborough Plant",
+        "label": "Location 2",
         "id": 303,
         "is_area": false,
-        "is_remote": false,
+        "is_remote": true,
         "locations": [
 
         ]
       },
       {
-        "label": "Peterborough Plant",
+        "label": "Location 3",
         "id": 304,
-        "is_area": false,
-        "is_remote": false,
-        "locations": [
-
-        ]
-      },
-      {
-        "label": "Peterborough Plant",
-        "id": 305,
-        "is_area": false,
-        "is_remote": false,
-        "locations": [
-
-        ]
-      },
-      {
-        "label": "Peterborough Plant",
-        "id": 306,
-        "is_area": false,
-        "is_remote": false,
-        "locations": [
-
-        ]
-      },
-      {
-        "label": "Peterborough Plant",
-        "id": 307,
-        "is_area": false,
-        "is_remote": false,
-        "locations": [
-
-        ]
-      },
-      {
-        "label": "Peterborough Plant",
-        "id": 308,
-        "is_area": false,
-        "is_remote": false,
-        "locations": [
-
-        ]
-      },
-      {
-        "label": "Rexdale -LMPMG Hd Office&Plant",
-        "id": 309,
-        "is_area": false,
-        "is_remote": false,
-        "locations": [
-
-        ]
-      },
-      {
-        "label": "Upfield Toronto",
-        "id": 310,
-        "is_area": false,
-        "is_remote": false,
-        "locations": [
-
-        ]
-      },
-      {
-        "label": "Remote Canada",
-        "id": 311,
-        "is_area": true,
-        "is_remote": true,
-        "locations": [
-          {
-            "label": "Anjou Sales Office",
-            "id": 312,
-            "is_area": false,
-            "is_remote": true,
-            "locations": [
-
-            ]
-          },
-          {
-            "label": "Calgary Sales Office",
-            "id": 313,
-            "is_area": false,
-            "is_remote": true,
-            "locations": [
-
-            ]
-          },
-          {
-            "label": "Ontario Sales Office",
-            "id": 314,
-            "is_area": false,
-            "is_remote": true,
-            "locations": [
-
-            ]
-          },
-          {
-            "label": "Quebec Sales Office",
-            "id": 315,
-            "is_area": false,
-            "is_remote": true,
-            "locations": [
-
-            ]
-          },
-          {
-            "label": "Rexdale Plant",
-            "id": 316,
-            "is_area": false,
-            "is_remote": false,
-            "locations": [
-
-            ]
-          },
-          {
-            "label": "Simcoe -Simcoe Plant - GHP",
-            "id": 317,
-            "is_area": false,
-            "is_remote": false,
-            "locations": [
-
-            ]
-          },
-          {
-            "label": "Toronto -Corp Headquarters",
-            "id": 318,
-            "is_area": false,
-            "is_remote": false,
-            "locations": [
-
-            ]
-          },
-          {
-            "label": "British Columbia Sales Office",
-            "id": 319,
-            "is_area": false,
-            "is_remote": false,
-            "locations": [
-
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "label": "Canada",
-    "id": 400,
-    "is_area": true,
-    "is_remote": true,
-    "locations": [
-      {
-        "label": "Location 1",
-        "id": 411,
-        "is_area": true,
-        "is_remote": true,
-        "locations": [
-          {
-            "label": "Location 2",
-            "id": 412,
-            "is_area": false,
-            "is_remote": true,
-            "locations": [
-
-            ]
-          },
-          {
-            "label": "Location 3",
-            "id": 413,
-            "is_area": false,
-            "is_remote": true,
-            "locations": [
-
-            ]
-          },
-          {
-            "label": "Location 4",
-            "id": 414,
-            "is_area": false,
-            "is_remote": true,
-            "locations": [
-
-            ]
-          },
-          {
-            "label": "Location 5",
-            "id": 415,
-            "is_area": false,
-            "is_remote": true,
-            "locations": [
-
-            ]
-          }
-        ]
-      },
-      {
-        "label": "Location 2",
-        "id": 416,
-        "is_area": false,
-        "is_remote": true,
-        "locations": [
-
-        ]
-      },
-      {
-        "label": "Location 3",
-        "id": 417,
         "is_area": true,
         "is_remote": true,
         "locations": [
           {
             "label": "Location 4",
-            "id": 418,
-            "is_area": false,
-            "is_remote": true,
-            "locations": [
-
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "label": "Canada",
-    "id": 500,
-    "is_area": true,
-    "is_remote": true,
-    "locations": [
-      {
-        "label": "Location 1",
-        "id": 511,
-        "is_area": true,
-        "is_remote": true,
-        "locations": [
-          {
-            "label": "Location 2",
-            "id": 512,
-            "is_area": false,
-            "is_remote": true,
-            "locations": [
-
-            ]
-          },
-          {
-            "label": "Location 3",
-            "id": 513,
-            "is_area": false,
-            "is_remote": true,
-            "locations": [
-
-            ]
-          },
-          {
-            "label": "Location 4",
-            "id": 514,
-            "is_area": false,
-            "is_remote": true,
-            "locations": [
-
-            ]
-          },
-          {
-            "label": "Location 5",
-            "id": 515,
-            "is_area": false,
-            "is_remote": true,
-            "locations": [
-
-            ]
-          }
-        ]
-      },
-      {
-        "label": "Location 2",
-        "id": 516,
-        "is_area": false,
-        "is_remote": true,
-        "locations": [
-
-        ]
-      },
-      {
-        "label": "Location 3",
-        "id": 517,
-        "is_area": true,
-        "is_remote": true,
-        "locations": [
-          {
-            "label": "Location 4",
-            "id": 518,
-            "is_area": false,
-            "is_remote": true,
-            "locations": [
-
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "label": "Canada",
-    "id": 600,
-    "is_area": true,
-    "is_remote": true,
-    "locations": [
-      {
-        "label": "Location 1",
-        "id": 611,
-        "is_area": true,
-        "is_remote": true,
-        "locations": [
-          {
-            "label": "Location 2",
-            "id": 612,
-            "is_area": false,
-            "is_remote": true,
-            "locations": [
-
-            ]
-          },
-          {
-            "label": "Location 3",
-            "id": 613,
-            "is_area": false,
-            "is_remote": true,
-            "locations": [
-
-            ]
-          },
-          {
-            "label": "Location 4",
-            "id": 614,
-            "is_area": false,
-            "is_remote": true,
-            "locations": [
-
-            ]
-          },
-          {
-            "label": "Location 5",
-            "id": 615,
-            "is_area": false,
-            "is_remote": true,
-            "locations": [
-
-            ]
-          }
-        ]
-      },
-      {
-        "label": "Location 2",
-        "id": 616,
-        "is_area": false,
-        "is_remote": true,
-        "locations": [
-
-        ]
-      },
-      {
-        "label": "Location 3",
-        "id": 617,
-        "is_area": true,
-        "is_remote": true,
-        "locations": [
-          {
-            "label": "Location 4",
-            "id": 618,
-            "is_area": false,
-            "is_remote": true,
-            "locations": [
-
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "label": "Canada",
-    "id": 700,
-    "is_area": true,
-    "is_remote": true,
-    "locations": [
-      {
-        "label": "Location 1",
-        "id": 711,
-        "is_area": true,
-        "is_remote": true,
-        "locations": [
-          {
-            "label": "Location 2",
-            "id": 712,
-            "is_area": false,
-            "is_remote": true,
-            "locations": [
-
-            ]
-          },
-          {
-            "label": "Location 3",
-            "id": 713,
-            "is_area": false,
-            "is_remote": true,
-            "locations": [
-
-            ]
-          },
-          {
-            "label": "Location 4",
-            "id": 714,
-            "is_area": false,
-            "is_remote": true,
-            "locations": [
-
-            ]
-          },
-          {
-            "label": "Location 5",
-            "id": 715,
-            "is_area": false,
-            "is_remote": true,
-            "locations": [
-
-            ]
-          }
-        ]
-      },
-      {
-        "label": "Location 2",
-        "id": 716,
-        "is_area": false,
-        "is_remote": true,
-        "locations": [
-
-        ]
-      },
-      {
-        "label": "Location 32",
-        "id": 717,
-        "is_area": true,
-        "is_remote": true,
-        "locations": [
-          {
-            "label": "Location 4",
-            "id": 718,
+            "id": 303,
             "is_area": false,
             "is_remote": true,
             "locations": [

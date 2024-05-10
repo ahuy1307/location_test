@@ -1,5 +1,5 @@
 import {useLocation} from "../contexts/LocationContextProvider.tsx";
-import {useEffect, useState} from "react";
+import { useState} from "react";
 import {LocationResponse} from "../interface.ts";
 import CustomDndTree from "../components/custom_draggable/CustomDndTree.tsx";
 import Navigation from "../components/Navigation.tsx";
@@ -10,22 +10,25 @@ function TestPage() {
     const [dataLocation, setDataLocation] = useState<LocationResponse[]>([])
     const [showTree, setShowTree] = useState(false)
 
-    useEffect(() => {
-        const fetchData = async () => {
-            //You can change the URL to show another data tree
-            const data = await getLocations("https://mocki.io/v1/19a31b45-6588-4ee5-8520-d5de693ea9eb")
-            setDataLocation(data)
+    const handleShowTree = async () => {
+        if(dataLocation.length > 0) {
+            setShowTree(!showTree)
+            return
         }
 
-        fetchData()
-    }, []);
+            //You can change the URL to show another data tree
+        const data = await getLocations("https://mocki.io/v1/ad5e9ede-ac6c-453e-9599-ea7489357b24")
+        setDataLocation(data)
+
+        setShowTree(!showTree)
+    }
 
 
     return (
         <>
             <Navigation/>
             <div className={"flex flex-col items-start p-4 gap-y-2"}>
-                <button className={"bg-black text-white hover:bg-gray-500 rounded-md px-4 py-2 transition-all duration-300"} onClick={() => setShowTree(!showTree)}>
+                <button className={"bg-black text-white hover:bg-gray-500 rounded-md px-4 py-2 transition-all duration-300"} onClick={() => handleShowTree()}>
                     {!showTree ? "View Tree" : "Hide Tree"}
                 </button>
                 {isLocationLoading ? <div>Loading...</div>  :

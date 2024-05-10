@@ -9,34 +9,44 @@ import {useEffect, useState} from "react";
 import {getTreeData} from "../../utils/getTreeData.ts";
 
 function CustomDndTree({locationData, className}: {locationData: LocationResponse[], className?: string}) {
+    const MAX_HEIGHT = 2;
     const [treeData, setTreeData] = useState<NodeModel<Location>[]>([]);
     const [count, setCount] = useState(3);
 
-    const handleDrop = (newTree: NodeModel<Location>[], options: DropOptions<Location>) => {
-        const { dragSource, destinationIndex} = options;
+    const handleDrop = (newTree: NodeModel<Location>[], options:DropOptions<Location>) => {
+        if(options.destinationIndex === undefined) {
+            setTreeData([...newTree]);
+            return;
+        }
+        const dragTreeIndex = newTree.findIndex(item => item.id === options.dragSource?.id);
+        const dragTree = newTree[dragTreeIndex];
 
-        if(!destinationIndex || !dragSource) return;
-
-        const index = destinationIndex == newTree.length ? destinationIndex - 1 : destinationIndex + 1;
-        const afterTree = newTree[index]
-        const dragTree = newTree[destinationIndex]
-
-        if (afterTree.data && dragSource.data) {
-            if (dragTree.data) {
-                if (afterTree.data.space == dragSource.data.space) {
-                    setTreeData([...newTree]);
-                    return;
-                } else dragTree.data.space = !dragTree.data.space;
-            }
+        if(!options.dropTarget?.data && dragTree.data) {
+            dragTree.data.height = 0
+            setTreeData([...newTree]);
+            return;
         }
 
-        setTreeData([...newTree]);
+        const dropTreeIndex = newTree.findIndex(item => item.id === options.dropTarget?.id);
+
+        if(dropTreeIndex != -1) {
+            const dropTree = newTree[dropTreeIndex];
+            if(dropTree.data && dragTree.data) {
+                if(dropTree.data.height != MAX_HEIGHT)
+                    dragTree.data.height = dropTree.data.height + 1;
+                else
+                    dragTree.data.height = MAX_HEIGHT
+                setTreeData([...newTree]);
+                return;
+            }
+        }
+        setTreeData([...newTree])
     }
 
     const setNewData = () => {
         const copyData = [...locationData];
         const newData = [...copyData.splice(0, count)];
-        setTreeData([...getTreeData(0, newData)]);
+        setTreeData([...getTreeData(0, newData, 0)]);
     }
 
     useEffect(() => {
@@ -69,10 +79,12 @@ function CustomDndTree({locationData, className}: {locationData: LocationRespons
                 sort={false}
                 insertDroppableFirst={false}
 
-                canDrop={(_tree, {dragSource, dropTargetId}) => {
+                canDrop={(tree, {dragSource, dropTargetId}) => {
                     if (dragSource?.parent === dropTargetId) {
                         return true;
                     }
+
+                    // return true;
                 }}
                 dragPreviewRender={(monitorProps) => (
                     <CustomDragPreview monitorProps={monitorProps}/>
