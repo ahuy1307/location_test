@@ -80,11 +80,13 @@ function CustomDndTree({locationData, className}: {locationData: LocationRespons
                 insertDroppableFirst={false}
 
                 canDrop={(tree, {dragSource, dropTargetId}) => {
+                    //if not show full tree, only allow drop on root
+                    if(dragSource?.droppable && !dragSource?.data?.is_area)
+                        return false
+
                     if (dragSource?.parent === dropTargetId) {
                         return true;
                     }
-
-                    // return true;
                 }}
                 dragPreviewRender={(monitorProps) => (
                     <CustomDragPreview monitorProps={monitorProps}/>
