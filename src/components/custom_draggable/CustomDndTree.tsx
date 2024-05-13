@@ -6,12 +6,12 @@ import {CustomDragPreview} from "./CustomDragPreview.tsx";
 import {Placeholder} from "./Placeholder.tsx";
 import {DndProvider} from "react-dnd";
 import {useEffect, useState} from "react";
-import {getTreeData} from "../../utils/getTreeData.ts";
+import {getParentData, getTreeData} from "../../utils/getTreeData.ts";
 
 function CustomDndTree({locationData, className}: {locationData: LocationResponse[], className?: string}) {
-    const MAX_HEIGHT = 2;
     const [treeData, setTreeData] = useState<NodeModel<Location>[]>([]);
     const [count, setCount] = useState(3);
+    const tree = getTreeData(0, locationData, 0)
 
     const handleDrop = (newTree: NodeModel<Location>[], options:DropOptions<Location>) => {
         if(options.destinationIndex === undefined) {
@@ -20,7 +20,6 @@ function CustomDndTree({locationData, className}: {locationData: LocationRespons
         }
         const dragTreeIndex = newTree.findIndex(item => item.id === options.dragSource?.id);
         const dragTree = newTree[dragTreeIndex];
-
         if(!options.dropTarget?.data && dragTree.data) {
             dragTree.data.height = 0
             setTreeData([...newTree]);
@@ -32,10 +31,10 @@ function CustomDndTree({locationData, className}: {locationData: LocationRespons
         if(dropTreeIndex != -1) {
             const dropTree = newTree[dropTreeIndex];
             if(dropTree.data && dragTree.data) {
-                if(dropTree.data.height != MAX_HEIGHT)
-                    dragTree.data.height = dropTree.data.height + 1;
-                else
-                    dragTree.data.height = MAX_HEIGHT
+                dragTree.data.height = dropTree.data.height + 1;
+                if(dragTree.data.real_parent_id != dropTree.id) {
+                    dragTree.data.real_parent_id = dropTree.id;
+                }
                 setTreeData([...newTree]);
                 return;
             }
@@ -44,9 +43,20 @@ function CustomDndTree({locationData, className}: {locationData: LocationRespons
     }
 
     const setNewData = () => {
-        const copyData = [...locationData];
-        const newData = [...copyData.splice(0, count)];
-        setTreeData([...getTreeData(0, newData, 0)]);
+        console.log(count)
+        const parentTree = getParentData(locationData.slice(count - 3, count))
+        setTreeData(prev => {
+           if(count  > 3)
+               return [
+                   ...prev,
+                   ...parentTree,
+               ]
+            else
+               return [
+                   ...parentTree,
+                     ...tree
+               ]
+        })
     }
 
     useEffect(() => {
@@ -106,7 +116,7 @@ function CustomDndTree({locationData, className}: {locationData: LocationRespons
         </DndProvider>
         {count <= locationData.length &&
             <p onClick={() => {
-                setCount(prev => prev * 2)
+                setCount(prev => prev + 3)
             }} className={"mt-2 text-gray-500 hover:underline cursor-pointer"}>View more</p>}
     </div>
 }
