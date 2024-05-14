@@ -32,6 +32,13 @@
       -ms-user-select: none;
       user-select: none;
   }
+
+  .pipeY {
+    position: absolute;
+    border-left: 2px solid #e7e7e7;
+    left: -7px;
+    top: -7px;
+  }
 }
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;

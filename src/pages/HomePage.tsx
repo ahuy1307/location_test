@@ -27,7 +27,7 @@ function HomePage() {
             <p className={"ml-8 mt-8 italic"}>Show max parent is 3 and show max child is 5</p>
             {isLocationLoading ? <div>Loading...</div>  :
                 <CustomDndTree locationData={dataLocation}
-                               className={"h-full max-h-[500px] ml-8 mt-8 overflow-y-scroll small-scrollbar w-fit pr-10 shadow border p-2"}/>
+                               className={"h-full max-h-[600px] ml-8 mt-8 overflow-y-scroll small-scrollbar w-fit pr-6 shadow border p-2"}/>
             }
         </>
     );

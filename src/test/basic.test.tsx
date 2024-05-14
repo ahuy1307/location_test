@@ -30,9 +30,9 @@ test('renders node of tree after data is fetched', async () => {
             height: 0,
             real_parent_id: 0
         }
-    }} depth={0} isOpen={false} onToggle={function(id: string | number): void {
+    }} depth={0} isOpen={false} onToggle={function (id: string | number): void {
         throw new Error('Function not implemented.');
-    } } />);
+    }} handleRef={null} />);
     // Wait for data to be fetched
     await screen.findByText('Company HQ');
     const nodeElement = screen.getByText('Company HQ');
@@ -56,7 +56,7 @@ test('performs drag and drop action correctly', async () => {
                }
            }} depth={0} isOpen={false} onToggle={(id: string | number): void => {
                throw new Error('Function not implemented.');
-           }} />
+           }} handleRef={null} />
            <CustomNode node={{
                id: '112',
                parent: '111',
@@ -69,9 +69,9 @@ test('performs drag and drop action correctly', async () => {
                    height: 1,
                    real_parent_id: 111
                }
-           }} depth={0} isOpen={false} onToggle={function(id: string | number): void {
+           }} depth={0} isOpen={false} onToggle={function (id: string | number): void {
                throw new Error('Function not implemented.');
-           } } />
+           }} handleRef={null} />
        </>
     );
     const dataAfterDragAnDrop = [

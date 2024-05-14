@@ -77,9 +77,10 @@ function CustomDndTree({locationData, className}: {locationData: LocationRespons
                 rootId={0}
                 render={(
                     node: NodeModel<Location>,
-                    {depth, isOpen, onToggle},
+                    {depth, isOpen, onToggle, handleRef},
                 ) => (
                         <CustomNode
+                            handleRef={handleRef}
                             node={node}
                             depth={depth}
                             isOpen={isOpen}
